@@ -1,0 +1,39 @@
+{
+    "name": "mouf/utils.fs-patcher",
+    "description": "A patch system than holds a list of patches and tells what patch has been run and what needs to be run on its environment.",
+    "keywords": ["mouf", "patch", "database"],
+    "homepage": "https://mouf-php.com/mouf/utils.fs-patcher",
+    "type": "mouf-library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kévin Nguyen",
+            "email": "k.nguyen@thecodingmachine.com",
+            "homepage": "http://mouf-php.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.7.0",
+    	"mouf/mouf-validators-interface": "~2.0",
+	    "mouf/utils.console": "~1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mouf\\Utils\\FSPatcher": "src/"
+        }
+    },
+    "extra": {
+	     "mouf": {
+		    "install" : [{
+			    "type" : "class",
+			    "class" : "Mouf\\Utils\\FSPatcher\\PatchInstaller",
+			    "description": "Create the patchService instance."
+			}
+		    ],
+			"require-admin": [
+    			"src/PatchAdmin.php"
+    			],
+			"logo": "icon.png"
+ 		}
+    }
+}
