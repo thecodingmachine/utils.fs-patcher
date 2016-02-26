@@ -30,9 +30,6 @@
 			    "description": "Create the patchService instance."
 			}
 		    ],
-			"require-admin": [
-    			"src/PatchAdmin.php"
-    			],
 			"logo": "icon.png"
  		}
     }
